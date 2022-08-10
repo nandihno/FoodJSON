@@ -11,6 +11,8 @@
 		BA876557289E988C00458155 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA876556289E988C00458155 /* ContentView.swift */; };
 		BA876559289E988D00458155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA876558289E988D00458155 /* Assets.xcassets */; };
 		BA87655C289E988D00458155 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA87655B289E988D00458155 /* Preview Assets.xcassets */; };
+		BA876564289FE4F900458155 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA876563289FE4F900458155 /* FoodModel.swift */; };
+		BA876566289FE5F100458155 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA876565289FE5F100458155 /* FetchData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		BA876556289E988C00458155 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BA876558289E988D00458155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA87655B289E988D00458155 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BA876563289FE4F900458155 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		BA876565289FE5F100458155 /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +55,12 @@
 		BA876553289E988C00458155 /* FoodJSON */ = {
 			isa = PBXGroup;
 			children = (
+				BA876562289FE4DD00458155 /* Model */,
 				BA876554289E988C00458155 /* FoodJSONApp.swift */,
 				BA876556289E988C00458155 /* ContentView.swift */,
 				BA876558289E988D00458155 /* Assets.xcassets */,
 				BA87655A289E988D00458155 /* Preview Content */,
+				BA876565289FE5F100458155 /* FetchData.swift */,
 			);
 			path = FoodJSON;
 			sourceTree = "<group>";
@@ -65,6 +71,14 @@
 				BA87655B289E988D00458155 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BA876562289FE4DD00458155 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA876563289FE4F900458155 /* FoodModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA876564289FE4F900458155 /* FoodModel.swift in Sources */,
 				BA876557289E988C00458155 /* ContentView.swift in Sources */,
+				BA876566289FE5F100458155 /* FetchData.swift in Sources */,
 				BA876555289E988C00458155 /* FoodJSONApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
