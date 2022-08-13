@@ -14,6 +14,13 @@ struct ContentView: View {
     @State var results:String = "";
     var fetch:FetchData = FetchData();
     @State var myResults:[String] = [];
+    @FocusState private var nameIsFocused: Bool;
+    
+    init() {
+       UITableView.appearance().separatorStyle = .none
+       UITableViewCell.appearance().backgroundColor = .clear
+       UITableView.appearance().backgroundColor = .clear
+    }
     
     var body: some View {
         ZStack {
@@ -29,11 +36,12 @@ struct ContentView: View {
                 Spacer()
                 Form {
                     Section(header: Text("Food Substitute")){
-                        TextField("Enter Ingredient Substitute", text: $subsitute);
+                        TextField("Enter Ingredient Substitute", text: $subsitute)
+                            .focused($nameIsFocused);
                     }
                     
                 }
-                .background(Color.teal);
+                .background(Color.clear);
                 
                 List(myResults,id: \.self) {
                     Text($0);
@@ -42,6 +50,7 @@ struct ContentView: View {
                 Spacer()
                 Button {
                     print("fetching data "+subsitute);
+                    nameIsFocused = false;
                     Task {
                         do {
                             foodSub = try await fetch.fetchWithAsync(ingredient: subsitute);
